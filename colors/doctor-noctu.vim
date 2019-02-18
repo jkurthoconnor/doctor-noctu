@@ -13,20 +13,20 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let g:colors_name = "noctu"
+let g:colors_name = "doctor-noctu"
 
 "}}}
 " Vim UI {{{
 hi Normal              ctermfg=7
 hi Cursor              ctermfg=7     ctermbg=1
-hi CursorLine          ctermbg=0     cterm=NONE
+hi CursorLine          ctermbg=0     cterm=underline
 hi MatchParen          ctermfg=7     ctermbg=NONE  cterm=underline
 hi Pmenu               ctermfg=15    ctermbg=0
 hi PmenuThumb          ctermbg=7
 hi PmenuSBar           ctermbg=8
 hi PmenuSel            ctermfg=0     ctermbg=4
-hi ColorColumn         ctermbg=0
-hi SpellBad            ctermfg=1     ctermbg=NONE  cterm=underline
+hi ColorColumn         ctermbg=8
+hi SpellBad            ctermfg=9     ctermbg=NONE  cterm=underline
 hi SpellCap            ctermfg=10    ctermbg=NONE  cterm=underline
 hi SpellRare           ctermfg=11    ctermbg=NONE  cterm=underline
 hi SpellLocal          ctermfg=13    ctermbg=NONE  cterm=underline
@@ -76,12 +76,12 @@ hi Delimiter       ctermfg=7
 hi Comment         ctermfg=8
 hi Underlined      ctermfg=4   cterm=underline
 hi Type            ctermfg=4
-hi String          ctermfg=11
-hi Keyword         ctermfg=2
+hi String          ctermfg=10
+hi Keyword         ctermfg=9
 hi Todo            ctermfg=15  ctermbg=NONE     cterm=bold,underline
 hi Function        ctermfg=4
 hi Identifier      ctermfg=7   cterm=NONE
-hi Statement       ctermfg=2   cterm=bold
+hi Statement       ctermfg=2   cterm=NONE
 hi Constant        ctermfg=13
 hi Number          ctermfg=12
 hi Boolean         ctermfg=4
@@ -118,6 +118,7 @@ hi! link xmlEqual   xmlTag
 
 "}}}
 " JavaScript {{{
+hi! link javaScriptFunctions   Functions 
 hi! link javaScript        Normal
 hi! link javaScriptBraces  Delimiter
 
@@ -147,11 +148,11 @@ hi markdownItalic                   cterm=underline
 
 "}}}
 " Ruby {{{
-hi! link rubyDefine                 Statement
 hi! link rubyLocalVariableOrMethod  Identifier
 hi! link rubyConstant               Constant
 hi! link rubyInstanceVariable       Number
 hi! link rubyStringDelimiter        rubyString
+hi  rubyDefine                      ctermfg=14
 
 "}}}
 " Git {{{
