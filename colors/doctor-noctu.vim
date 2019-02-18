@@ -1,7 +1,8 @@
-" noctu.vim - Vim color scheme for 16-color terminals
+" doctor-noctu.vim - Vim color scheme for 16-color terminals
 " --------------------------------------------------------------
-" Author:   Noah Frederick (http://noahfrederick.com/)
-" Version:  1.8.0
+" Kurth O'Connor
+" Original Author: Noah Frederick (http://noahfrederick.com/)
+" Forked from `noctu.vim` version:  1.8.0
 " --------------------------------------------------------------
 
 " Scheme setup {{{
