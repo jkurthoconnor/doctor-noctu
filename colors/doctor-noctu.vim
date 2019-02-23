@@ -19,18 +19,18 @@ let g:colors_name = "doctor-noctu"
 " Vim UI {{{
 hi Normal              ctermfg=7
 hi Cursor              ctermfg=7     ctermbg=1
-hi CursorLine          ctermbg=0     cterm=underline
-hi MatchParen          ctermfg=7     ctermbg=NONE  cterm=underline
+hi CursorLine          cterm=NONE
+hi MatchParen          ctermfg=7     ctermbg=NONE  cterm=underline,italic
 hi Pmenu               ctermfg=15    ctermbg=0
 hi PmenuThumb          ctermbg=7
 hi PmenuSBar           ctermbg=8
 hi PmenuSel            ctermfg=0     ctermbg=4
-hi ColorColumn         ctermbg=8
+hi ColorColumn         ctermbg=18    cterm=NONE    ctermfg=NONE
 hi SpellBad            ctermfg=9     ctermbg=NONE  cterm=underline
 hi SpellCap            ctermfg=10    ctermbg=NONE  cterm=underline
 hi SpellRare           ctermfg=11    ctermbg=NONE  cterm=underline
 hi SpellLocal          ctermfg=13    ctermbg=NONE  cterm=underline
-hi NonText             ctermfg=8
+hi NonText             ctermfg=18
 hi LineNr              ctermfg=8     ctermbg=NONE
 hi CursorLineNr        ctermfg=11    ctermbg=0
 hi Visual              ctermfg=0     ctermbg=12
@@ -59,7 +59,6 @@ hi User6               ctermfg=6     ctermbg=0
 hi User7               ctermfg=7     ctermbg=0
 hi User8               ctermfg=8     ctermbg=0
 hi User9               ctermfg=15    ctermbg=5
-hi! link CursorColumn  CursorLine
 hi! link SignColumn    LineNr
 hi! link WildMenu      Visual
 hi! link FoldColumn    SignColumn
@@ -73,16 +72,16 @@ hi! link SpecialKey    NonText
 "}}}
 " Generic syntax {{{
 hi Delimiter       ctermfg=7
-hi Comment         ctermfg=8
+hi Comment         ctermfg=8   cterm=italic
 hi Underlined      ctermfg=4   cterm=underline
 hi Type            ctermfg=4
 hi String          ctermfg=10
 hi Keyword         ctermfg=9
 hi Todo            ctermfg=15  ctermbg=NONE     cterm=bold,underline
-hi Function        ctermfg=4
+hi Function        ctermfg=2
 hi Identifier      ctermfg=7   cterm=NONE
 hi Statement       ctermfg=2   cterm=NONE
-hi Constant        ctermfg=13
+hi Constant        ctermfg=11
 hi Number          ctermfg=12
 hi Boolean         ctermfg=4
 hi Special         ctermfg=13
@@ -148,11 +147,15 @@ hi markdownItalic                   cterm=underline
 
 "}}}
 " Ruby {{{
+
+hi! link rubyAttribute  Keyword
 hi! link rubyLocalVariableOrMethod  Identifier
 hi! link rubyConstant               Constant
 hi! link rubyInstanceVariable       Number
 hi! link rubyStringDelimiter        rubyString
-hi  rubyDefine                      ctermfg=14
+hi  rubyDefine                      ctermfg=9
+hi  rubyClass                      ctermfg=14
+hi  rubySymbol                      ctermfg=13
 
 "}}}
 " Git {{{
